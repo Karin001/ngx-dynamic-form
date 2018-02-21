@@ -1,0 +1,8 @@
+<div [formGroup]="group"  class="checkbox-group">
+    <p class="label-title">{{config.label}}</p>
+    <div *ngFor="let item of config.options; let i = index">
+      <input type="checkbox" [id]="config.name+i"[formControlName]="config.name" [value]="item" (click)="pushValue($event.target.checked, item)">
+    
+        <label [for]="config.name+i">{{item}}</label>
+    </div>
+  </div>

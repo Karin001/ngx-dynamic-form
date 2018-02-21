@@ -1,0 +1,8 @@
+<div [formGroup]="group"  class="radio-group">
+  <p class="label-title">{{config.label}}</p>
+  <div *ngFor="let item of config.options; let i = index">
+    <input type="radio"  [id]="i"[formControlName]="config.name" [value]="item">
+  
+      <label [for]="i">{{item}}</label>
+  </div>
+</div>
